@@ -12,7 +12,7 @@ class BackendApi(private val httpClient: HttpClient) {
 
         val response =
             httpClient.get<SearchResponse>("${Configuration.GITHUB_API_BASE_URL}/search/repositories") {
-                if (Configuration.GITHUB_TOKEN.isBlank()) {
+                if (Configuration.GITHUB_TOKEN.isNotBlank()) {
                     header("Authorization", "token ${Configuration.GITHUB_TOKEN}")
                 }
                 parameter("q", searchQuery)
