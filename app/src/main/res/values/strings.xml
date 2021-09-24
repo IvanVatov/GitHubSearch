@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GitHub Search</string>
+    <string name="search_in_repositories">Search in repositories</string>
+</resources>
